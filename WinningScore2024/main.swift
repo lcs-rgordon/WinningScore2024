@@ -60,10 +60,10 @@ func calculateScore(threePointerCount: Int, fieldGoalCount: Int, freeThrowCount:
 // Quick tests
 
 // Expected return value: 60
-print(calculateScore(threePointerCount: 10, fieldGoalCount: 10, freeThrowCount: 10))
+//print(calculateScore(threePointerCount: 10, fieldGoalCount: 10, freeThrowCount: 10))
 
 // Expected return value: 12
-print(calculateScore(threePointerCount: 3, fieldGoalCount: 1, freeThrowCount: 1))
+//print(calculateScore(threePointerCount: 3, fieldGoalCount: 1, freeThrowCount: 1))
 
 func compareScores(teamAScore: Int, teamBScore: Int) -> String {
     if teamAScore > teamBScore {
@@ -78,6 +78,28 @@ func compareScores(teamAScore: Int, teamBScore: Int) -> String {
 // Quick tests
 
 // Expected return value: 60
-print(compareScores(teamAScore: 10, teamBScore: 5))  // A
-print(compareScores(teamAScore: 5, teamBScore: 10))  // B
-print(compareScores(teamAScore: 10, teamBScore: 10)) // T
+//print(compareScores(teamAScore: 10, teamBScore: 5))  // A
+//print(compareScores(teamAScore: 5, teamBScore: 10))  // B
+//print(compareScores(teamAScore: 10, teamBScore: 10)) // T
+
+// INTERACTIVE VERSION
+
+// 1. Input
+let teamA = calculateScore(
+    threePointerCount: getInput(withPrompt: "", minimum: 0, maximum: nil),
+    fieldGoalCount: getInput(withPrompt: "", minimum: 0, maximum: nil),
+    freeThrowCount: getInput(withPrompt: "", minimum: 0, maximum: nil)
+)
+
+let teamB = calculateScore(
+    threePointerCount: getInput(withPrompt: "", minimum: 0, maximum: nil),
+    fieldGoalCount: getInput(withPrompt: "", minimum: 0, maximum: nil),
+    freeThrowCount: getInput(withPrompt: "", minimum: 0, maximum: nil)
+)
+
+// 2. Process
+let result = compareScores(teamAScore: teamA, teamBScore: teamB)
+
+// 3. Output
+print(result)
+
