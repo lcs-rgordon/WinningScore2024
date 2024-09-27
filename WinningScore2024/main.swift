@@ -64,3 +64,20 @@ print(calculateScore(threePointerCount: 10, fieldGoalCount: 10, freeThrowCount: 
 
 // Expected return value: 12
 print(calculateScore(threePointerCount: 3, fieldGoalCount: 1, freeThrowCount: 1))
+
+func compareScores(teamAScore: Int, teamBScore: Int) -> String {
+    if teamAScore > teamBScore {
+        return "A"
+    } else if teamAScore < teamBScore {
+        return "B"
+    } else {
+        return "T"
+    }
+}
+
+// Quick tests
+
+// Expected return value: 60
+print(compareScores(teamAScore: 10, teamBScore: 5))  // A
+print(compareScores(teamAScore: 5, teamBScore: 10))  // B
+print(compareScores(teamAScore: 10, teamBScore: 10)) // T
